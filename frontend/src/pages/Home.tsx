@@ -15,16 +15,16 @@ export default function Home() {
         <div className="tx-hero-upper">
           <HeroPhotoCollage />
           <section className="tx-hero-head">
-            <div className="tx-page-center max-w-2xl text-center text-white">
+            <div className="tx-page-center max-w-2xl text-center text-slate-900 font-bold">
               <div className="flex flex-col items-center gap-3 mb-4 tx-hero-head-fade">
                 <PenguinMascot size={88} pose="wave" className="mb-1" />
-                <AiStatusBadge />
+                <AiStatusBadge variant="light" />
               </div>
-              <p className="text-sm opacity-95 mb-2 tx-hero-head-fade">腾讯 S3 · HR 与管理线 · 模拟实训</p>
-              <h1 className="text-3xl sm:text-4xl font-bold mb-4 tx-hero-head-fade drop-shadow-sm">
+              <p className="text-sm text-slate-900 mb-2 tx-hero-head-fade">腾讯 S3 · HR 与管理线 · 模拟实训</p>
+              <h1 className="text-3xl sm:text-4xl font-bold mb-4 tx-hero-head-fade text-slate-900">
                 AI 赋能 HR 模拟场
               </h1>
-              <p className="text-sm opacity-95 leading-relaxed max-w-md mx-auto tx-hero-head-fade">
+              <p className="text-sm text-slate-900 leading-relaxed max-w-md mx-auto tx-hero-head-fade">
                 以培训生身份沿七日实训路线闯关 HR 实战。创意型在平台 AI Chat 中 AIGC 出图，系统分别评估成稿与 Prompt 质量。
               </p>
             </div>

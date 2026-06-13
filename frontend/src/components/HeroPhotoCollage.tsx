@@ -22,7 +22,7 @@ export default function HeroPhotoCollage() {
               draggable={false}
               className="tx-hero-collage-img"
               style={{
-                objectPosition: p.objectPosition ?? "center bottom",
+                objectPosition: p.objectPosition ?? "center center",
                 animationDelay: `${delay + 0.12}s`,
               }}
             />

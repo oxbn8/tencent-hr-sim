@@ -6,6 +6,7 @@ __pycache__/
 backend/.env
 backend/generated/*
 !backend/generated/.gitkeep
+backend/data/submissions.jsonl
 frontend/dist/
 .DS_Store
 *.log

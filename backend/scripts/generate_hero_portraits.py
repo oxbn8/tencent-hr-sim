@@ -1,4 +1,4 @@
-"""Generate Tencent 2025-style flat Q-version penguin hero slices for 4 HR roles."""
+"""Generate Tencent Q-version penguin hero slices for 4 HR roles (unified 3D style)."""
 from __future__ import annotations
 
 import sys
@@ -15,41 +15,46 @@ from services.llm_service import generate_hunyuan_image  # noqa: E402
 
 OUT_DIR = ROOT.parent / "frontend" / "public" / "hero"
 
-# 对标腾讯2025校招主视觉：Q版扁平插画 + 粗描边 + 高饱和主题色 + 漂浮图标
-STYLE = (
-    "腾讯2025实习生招聘主视觉设计风格，Q版扁平矢量插画，圆润可爱腾讯QQ企鹅，"
-    "粗黑色描边贴纸感，大眼睛简笔表情，高饱和马卡龙配色，"
-    "纯色或轻渐变背景，周围漂浮星星与主题小图标装饰，"
-    "青春活泼商务感，竖版半身构图企鹅居中，简约块面阴影，"
-    "无标题无文字无水印"
+# 窄栏 cover 填充友好：企鹅居中偏下，道具分布四角，轮廓融入背景无白边
+BASE_STYLE = (
+    "3D渲染可爱Q版腾讯企鹅，圆润立体胖企鹅、黑色大眼带白高光、粉色圆腮红、"
+    "小巧橙色喙与脚蹼，全身站立，企鹅居中偏下约占画面高度45%，"
+    "企鹅直接放置在纯色背景上，轮廓与背景自然融合，"
+    "严禁白色描边、严禁白色外轮廓、严禁贴纸白边、严禁黑色描边、严禁光晕描边、严禁cutout抠图白边，"
+    "头部到脚蹼完整可见，道具分布在画面四角与边缘不遮挡企鹅身体，"
+    "竖版构图适合窄栏裁切，轻3D块面阴影，无标题无文字无水印"
 )
 
 ROLES = [
     (
         "penguin-communicator.jpg",
-        f"沟通型HR主题，青绿色背景，企鹅热情挥手，周围漂浮对话气泡、"
-        f"爱心与连接图标，亲和传播气质。{STYLE}",
+        f"沟通型HR，青绿色纯色背景，企鹅热情挥手。"
+        f"配饰位置：左上角对话气泡，右上角粉色爱心，左下角小星星，"
+        f"右下角人物名片卡片，均漂浮在四角。{BASE_STYLE}",
     ),
     (
         "penguin-creative.jpg",
-        f"创意型HR主题，亮紫色背景，企鹅戴贝雷帽或时尚眼镜，"
-        f"周围漂浮场记板、相机、调色盘、AIGC sparkle图标，视觉创意气质。{STYLE}",
+        f"创意型HR，亮紫色纯色背景，企鹅戴粉蓝拼色贝雷帽与黑框眼镜。"
+        f"配饰位置：左上角场记板，右上角复古相机，左下角调色盘，"
+        f"右下角AIGC sparkle笑脸气泡，均漂浮在四角。{BASE_STYLE}",
     ),
     (
         "penguin-analyst.jpg",
-        f"分析型HR主题，暖橙黄色背景，企鹅戴圆框眼镜抱文件夹，"
-        f"周围漂浮柱状图、放大镜、灯泡与文档图标，数据洞察气质。{STYLE}",
+        f"分析型HR，暖橙黄色纯色背景，企鹅戴圆框眼镜双手抱棕色文件夹。"
+        f"配饰位置：左上角柱状图，右上角饼图，左下角放大镜，"
+        f"右下角灯泡，均漂浮在四角。{BASE_STYLE}",
     ),
     (
         "penguin-tech.jpg",
-        f"技术型HR主题，腾讯亮蓝色背景，企鹅戴耳机操作笔记本，"
-        f"周围漂浮代码括号、0101二进制、齿轮与电路图标，数字化气质。{STYLE}",
+        f"技术型HR，腾讯亮蓝色纯色背景，企鹅戴黑色头戴耳机双手捧笔记本电脑。"
+        f"配饰位置：左上角代码大括号，右上角0101二进制，左下角齿轮，"
+        f"右下角电路芯片，均漂浮在四角。{BASE_STYLE}",
     ),
 ]
 
 
 def save_url(url: str, path: Path) -> None:
-    with urlopen(url, timeout=90) as resp:
+    with urlopen(url, timeout=120) as resp:
         data = resp.read()
     path.write_bytes(data)
     print(f"  saved {path.name} ({len(data)} bytes)")
@@ -65,6 +70,11 @@ def main() -> None:
             print(f"  FAILED {filename}")
             sys.exit(1)
         save_url(remote, out)
+    print("Compositing onto panel backgrounds (remove white fringe)...")
+    from clean_hero_outline import PANEL_BG, composite_on_bg  # noqa: WPS433
+
+    for filename, bg in PANEL_BG.items():
+        composite_on_bg(OUT_DIR / filename, bg)
     print("Done.")
 
 
