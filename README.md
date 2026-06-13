@@ -4,7 +4,13 @@
 
 ## 在线体验
 
-部署后访问：`https://<your-render-url>/`
+**公网 Demo**：https://learned-sauce-charlotte-possibly.trycloudflare.com
+
+> 通过 Cloudflare Quick Tunnel 暴露本地全栈服务（前端 + API）。如需长期稳定托管，见下方 Render 一键部署。
+
+**源码**：https://github.com/oxbn8/tencent-hr-sim
+
+**永久部署（Render 免费层）**：[一键部署到 Render](https://render.com/deploy?repo=https://github.com/oxbn8/tencent-hr-sim)
 
 ## 本地开发
 

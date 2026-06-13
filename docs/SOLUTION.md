@@ -66,7 +66,11 @@
 
 ## 五、访问方式
 
-**在线 Demo**：见 README 顶部部署链接（Render Docker 一键部署，含前端静态资源与 FastAPI 同域 `/api`）。
+**在线 Demo**：https://learned-sauce-charlotte-possibly.trycloudflare.com
+
+**源码仓库**：https://github.com/oxbn8/tencent-hr-sim
+
+**长期托管**：连接 GitHub 至 [Render](https://render.com/deploy?repo=https://github.com/oxbn8/tencent-hr-sim)，使用根目录 `Dockerfile` / `render.yaml` 一键部署，单域名同时提供页面与 `/api`。
 
 **本地**：`backend` 启动 API + `frontend` dev 代理；生产环境由 FastAPI 托管 `frontend/dist`，单链接即可完整体验。
 
