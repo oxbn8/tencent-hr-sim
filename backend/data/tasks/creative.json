@@ -1,0 +1,134 @@
+[
+  {
+    "id": "cr_d1_slogan",
+    "role": "creative",
+    "day": 1,
+    "type": "aigc_copy",
+    "title": "为 {team_name} 校招撰写 Slogan",
+    "brief_template": "【来自】{bg_name} · {team_name} 雇主品牌组\n\n培训生你好，\n请为 {team_name} 2026 校园招聘撰写一条 Slogan（≤20 字），并附 1–2 句阐释。\n\n要求：年轻、有记忆点；可体现 AI 赋能；避免夸大承诺。\n\n可在 AI Chat 中迭代 Prompt 生成多版文案，提交你的最终版。",
+    "time_limit_seconds": 480,
+    "submit_schema": [
+      { "key": "slogan", "label": "Slogan（≤20字）", "type": "text", "required": true },
+      { "key": "explanation", "label": "阐释", "type": "textarea", "required": true }
+    ],
+    "scoring": { "mode": "dual", "pass_score": 60, "weights": { "deliverable": 0.55, "prompt": 0.45 } },
+    "chat": {
+      "enabled": true,
+      "mode": "text_gen",
+      "max_turns": 20,
+      "max_images": 0,
+      "prompt_tips_checklist": ["是否说明目标受众", "是否限制字数", "是否给出风格参考", "是否多轮迭代"]
+    },
+    "hints": ["Slogan 要短、好记、可朗读", "可先用 Chat 生成 5 版再精炼"]
+  },
+  {
+    "id": "cr_d2_9grid",
+    "role": "creative",
+    "day": 2,
+    "type": "copywriting",
+    "title": "雇主品牌推文 9 图文案",
+    "brief_template": "【来自】{bg_name} 雇主品牌组\n\n为 {team_name} 制作一条微信公众号 9 图推文，请提交 9 段配图文案（每段 ≤30 字）+ 1 个总标题。\n\n主题：「在 {team_name} 工作的 N 种打开方式」",
+    "time_limit_seconds": 600,
+    "submit_schema": [
+      { "key": "main_title", "label": "推文总标题", "type": "text", "required": true },
+      { "key": "grid_copy", "label": "9 图配文（每行一段）", "type": "textarea", "required": true }
+    ],
+    "scoring": { "mode": "single", "pass_score": 60, "weights": { "deliverable": 1.0, "prompt": 0 } },
+    "chat": { "enabled": true, "mode": "text_gen", "max_turns": 15, "max_images": 0, "prompt_tips_checklist": [] },
+    "hints": ["9 段文案应有叙事节奏：引入→展开→高潮→号召"]
+  },
+  {
+    "id": "cr_d3_poster",
+    "role": "creative",
+    "day": 3,
+    "type": "aigc_poster",
+    "title": "{team_name} 校招空宣主视觉海报",
+    "brief_template": "【来自】{bg_name} 雇主品牌组\n【主题】紧急 — 2026 校招空宣主视觉\n\n培训生你好，\n我们将在下周举办 **{team_name} 2026 校园招聘空中宣讲会**，需要你产出 1 张主视觉海报。\n\n**要求**\n- 体现「年轻、多元、AI 赋能」\n- 主标题需包含「2026 校招」语义\n- 符合腾讯雇主品牌基调，避免未授权 IP、夸大宣传\n- 竖版 1080×1920 概念\n\n**提交**\n1. 主标题、副标题\n2. 在 AI Chat 中生成并选用一张海报\n3. Chat 中的 Prompt 将纳入评分\n\n**限时**：12 分钟",
+    "time_limit_seconds": 720,
+    "submit_schema": [
+      { "key": "main_title", "label": "主标题", "type": "text", "required": true },
+      { "key": "sub_title", "label": "副标题", "type": "text", "required": true },
+      { "key": "image_url", "label": "海报", "type": "image_pick", "required": true }
+    ],
+    "scoring": { "mode": "dual", "pass_score": 60, "weights": { "deliverable": 0.55, "prompt": 0.45 } },
+    "chat": {
+      "enabled": true,
+      "mode": "image_gen",
+      "max_turns": 20,
+      "max_images": 5,
+      "prompt_tips_checklist": [
+        "是否写明用途（校招空宣海报）",
+        "是否写明版式（竖版 9:16）",
+        "是否指定主色/风格",
+        "是否列出必含文字（2026 校招）",
+        "是否写出禁止项（无未授权 IP）",
+        "是否在第 2+ 轮针对上一轮做了修改"
+      ]
+    },
+    "hints": ["Prompt 里写清尺寸、色调、必含文字", "第二轮基于助手建议做迭代"]
+  },
+  {
+    "id": "cr_d4_video_script",
+    "role": "creative",
+    "day": 4,
+    "type": "aigc_copy",
+    "title": "Open Day 30s 视频脚本",
+    "brief_template": "为 {team_name} 校招 Open Day 撰写 30 秒宣传视频脚本，含分镜（镜头号+画面+旁白）。\n\n调性：快节奏、信息密度高、结尾有 CTA（扫码投递）。",
+    "time_limit_seconds": 720,
+    "submit_schema": [
+      { "key": "script", "label": "分镜脚本", "type": "textarea", "required": true }
+    ],
+    "scoring": { "mode": "dual", "pass_score": 60, "weights": { "deliverable": 0.55, "prompt": 0.45 } },
+    "chat": { "enabled": true, "mode": "text_gen", "max_turns": 20, "max_images": 0, "prompt_tips_checklist": ["是否指定时长", "是否要求分镜格式", "是否给出 CTA"] },
+    "hints": ["30s 约 75–90 字旁白", "分镜用表格或编号均可"]
+  },
+  {
+    "id": "cr_d5_longimg",
+    "role": "creative",
+    "day": 5,
+    "type": "copywriting",
+    "title": "技术岗雇主品牌长图结构",
+    "brief_template": "为 {team_name} 技术岗校招设计一条 H5 长图的内容结构（6–8 个模块），每模块：标题 + 2 句 copy + 视觉建议。",
+    "time_limit_seconds": 600,
+    "submit_schema": [
+      { "key": "structure", "label": "长图模块结构", "type": "textarea", "required": true }
+    ],
+    "scoring": { "mode": "single", "pass_score": 60, "weights": { "deliverable": 1.0, "prompt": 0 } },
+    "chat": { "enabled": true, "mode": "text_gen", "max_turns": 15, "max_images": 0, "prompt_tips_checklist": [] },
+    "hints": ["模块顺序：痛点→团队→技术栈→成长→福利→投递"]
+  },
+  {
+    "id": "cr_d6_campaign",
+    "role": "creative",
+    "day": 6,
+    "type": "aigc_poster",
+    "title": "多 BG 联合校招 Campaign 主 KV",
+    "brief_template": "腾讯 2026 联合校招 Campaign 需要 1 张主 KV（主视觉）。\n你代表 {bg_name}·{team_name} 参与联合创意。\n\n要求：统一主标题「腾讯 2026 全球校招」；副标题体现 {team_name}；竖版；年轻科技风。",
+    "time_limit_seconds": 900,
+    "submit_schema": [
+      { "key": "main_title", "label": "主标题", "type": "text", "required": true },
+      { "key": "sub_title", "label": "副标题", "type": "text", "required": true },
+      { "key": "image_url", "label": "主 KV", "type": "image_pick", "required": true }
+    ],
+    "scoring": { "mode": "dual", "pass_score": 60, "weights": { "deliverable": 0.55, "prompt": 0.45 } },
+    "chat": { "enabled": true, "mode": "image_gen", "max_turns": 20, "max_images": 5, "prompt_tips_checklist": ["联合 Campaign 需统一主标题", "副标题体现业务线特色"] },
+    "hints": ["主 KV 信息层级：主标题 > 副标题 > 视觉"]
+  },
+  {
+    "id": "cr_d7_ab_test",
+    "role": "creative",
+    "day": 7,
+    "type": "aigc_poster",
+    "title": "主视觉 A/B 两版 + 选择理由",
+    "brief_template": "基于本周实训，为 {team_name} 校招产出 A/B 两版主视觉（不同风格），并说明你会选择哪一版投放及理由（≤200 字）。",
+    "time_limit_seconds": 900,
+    "submit_schema": [
+      { "key": "choice", "label": "选择 A 或 B", "type": "text", "required": true },
+      { "key": "reason", "label": "选择理由", "type": "textarea", "required": true },
+      { "key": "image_url", "label": "选用版本海报", "type": "image_pick", "required": true }
+    ],
+    "scoring": { "mode": "dual", "pass_score": 60, "weights": { "deliverable": 0.55, "prompt": 0.45 } },
+    "chat": { "enabled": true, "mode": "image_gen", "max_turns": 25, "max_images": 6, "prompt_tips_checklist": ["A/B 两版需明确不同风格变量", "理由需关联目标受众"] },
+    "hints": ["完成 Day7 后可查看本周成长报告"]
+  }
+]

@@ -1,0 +1,107 @@
+[
+  {
+    "id": "cm_d1_urgent_hc",
+    "role": "comm",
+    "day": 1,
+    "type": "comm_reply",
+    "title": "业务方催招：澄清 HC 与 timeline",
+    "brief_template": "【来自】{bg_name} · {team_name} HRBP\n【主题】紧急 — Q3 校招 HC 确认\n\n我们收到 3 个 tech 岗位 urgent 需求，HC 表与 COE 数量对不上。请在今天下班前回复：\n1) 当前可发 offer 数量\n2) 最早到岗时间\n3) 若 HC 不足，你的建议方案\n\n业务方语气较急，请专业、坚定但不激化冲突。",
+    "time_limit_seconds": 600,
+    "submit_schema": [
+      { "key": "reply", "label": "回复邮件/IM", "type": "textarea", "required": true }
+    ],
+    "scoring": { "mode": "comm", "pass_score": 60, "weights": { "deliverable": 0.7, "prompt": 0.2, "process": 0.1 } },
+    "chat": { "enabled": true, "mode": "text_gen", "max_turns": 15, "max_images": 0, "prompt_tips_checklist": ["可请 AI 生成 3 版草稿", "务必人工修改后再提交"] },
+    "hints": ["先对齐事实再给出 timeline", "HC 不足时给备选方案而非只拒绝"]
+  },
+  {
+    "id": "cm_d2_offer",
+    "role": "comm",
+    "day": 2,
+    "type": "comm_reply",
+    "title": "候选人拒 Offer：挽回邮件",
+    "brief_template": "候选人为 {team_name} 后端岗，已口头拒 Offer（原因：竞品薪资高 15%）。\n请撰写一封挽回邮件：表达尊重、探询真实顾虑、给出可讨论空间（不含违规承诺）。",
+    "time_limit_seconds": 600,
+    "submit_schema": [
+      { "key": "reply", "label": "挽回邮件", "type": "textarea", "required": true }
+    ],
+    "scoring": { "mode": "comm", "pass_score": 60, "weights": { "deliverable": 0.7, "prompt": 0.2, "process": 0.1 } },
+    "chat": { "enabled": true, "mode": "text_gen", "max_turns": 15, "max_images": 0, "prompt_tips_checklist": [] },
+    "hints": ["避免施压式话术", "可提议电话沟通"]
+  },
+  {
+    "id": "cm_d3_er_case",
+    "role": "comm",
+    "day": 3,
+    "type": "comm_dialogue",
+    "title": "员工工时争议：首次沟通",
+    "brief_template": "员工反映连续两周加班无补偿，情绪激动，已在部门群 @HR。\n请撰写首次一对一沟通的开场话术 + 3 个澄清问题 + 下一步安排。\n\n可使用 AI Chat 模拟员工回复后再完善你的方案。",
+    "time_limit_seconds": 720,
+    "submit_schema": [
+      { "key": "reply", "label": "沟通方案", "type": "textarea", "required": true }
+    ],
+    "scoring": { "mode": "comm", "pass_score": 60, "weights": { "deliverable": 0.7, "prompt": 0.2, "process": 0.1 } },
+    "chat": { "enabled": true, "mode": "dialogue_sim", "max_turns": 20, "max_images": 0, "prompt_tips_checklist": [] },
+    "hints": ["先倾听再表态", "记录事实与诉求分离"]
+  },
+  {
+    "id": "cm_d4_training",
+    "role": "comm",
+    "day": 4,
+    "type": "comm_reply",
+    "title": "培训需求访谈：纪要 + 回复",
+    "brief_template": "业务方希望为 {team_name} 新入职技术同学做「AI 工具入门」培训。\n请提交：访谈纪要（需求/人数/时间/期望产出）+ 给业务方的确认回复。",
+    "time_limit_seconds": 720,
+    "submit_schema": [
+      { "key": "reply", "label": "纪要 + 回复", "type": "textarea", "required": true }
+    ],
+    "scoring": { "mode": "comm", "pass_score": 60, "weights": { "deliverable": 0.7, "prompt": 0.2, "process": 0.1 } },
+    "chat": { "enabled": true, "mode": "text_gen", "max_turns": 15, "max_images": 0, "prompt_tips_checklist": [] },
+    "hints": ["纪要要结构化：背景-需求-约束-下一步"]
+  },
+  {
+    "id": "cm_d5_hrbp",
+    "role": "comm",
+    "day": 5,
+    "type": "comm_reply",
+    "title": "HRBP 周会：本周 priority 邮件",
+    "brief_template": "作为 {team_name} HRBP，向业务负责人发送本周 priority 邮件：\n- 招聘进展\n- 1 个风险\n- 1 个需业务配合事项",
+    "time_limit_seconds": 600,
+    "submit_schema": [
+      { "key": "reply", "label": "Priority 邮件", "type": "textarea", "required": true }
+    ],
+    "scoring": { "mode": "comm", "pass_score": 60, "weights": { "deliverable": 0.7, "prompt": 0.2, "process": 0.1 } },
+    "chat": { "enabled": true, "mode": "text_gen", "max_turns": 15, "max_images": 0, "prompt_tips_checklist": [] },
+    "hints": ["邮件开头一句话总结本周重点"]
+  },
+  {
+    "id": "cm_d6_conflict",
+    "role": "comm",
+    "day": 6,
+    "type": "comm_dialogue",
+    "title": "跨部门冲突调解",
+    "brief_template": "产品与设计因校招宣传物料延期互相指责。你作为 HR 需组织一次 30 分钟对齐。\n请提交：会前沟通话术 + 会议 agenda + 引导讨论的 3 个问题。",
+    "time_limit_seconds": 900,
+    "submit_schema": [
+      { "key": "reply", "label": "调解方案", "type": "textarea", "required": true }
+    ],
+    "scoring": { "mode": "comm", "pass_score": 60, "weights": { "deliverable": 0.7, "prompt": 0.2, "process": 0.1 } },
+    "chat": { "enabled": true, "mode": "dialogue_sim", "max_turns": 20, "max_images": 0, "prompt_tips_checklist": [] },
+    "hints": ["对事不对人", "Agenda 要有时间盒"]
+  },
+  {
+    "id": "cm_d7_exec_sum",
+    "role": "comm",
+    "day": 7,
+    "type": "comm_reply",
+    "title": "向 COE 汇报：Executive Summary",
+    "brief_template": "本周你在 {team_name} 支持了招聘、员工关系与培训需求。\n请向 COE 提交一页 Executive Summary（≤300 字）：成果 / 风险 / 下周计划 / 对 COE 的支持请求。",
+    "time_limit_seconds": 900,
+    "submit_schema": [
+      { "key": "reply", "label": "Executive Summary", "type": "textarea", "required": true }
+    ],
+    "scoring": { "mode": "comm", "pass_score": 60, "weights": { "deliverable": 0.7, "prompt": 0.2, "process": 0.1 } },
+    "chat": { "enabled": true, "mode": "text_gen", "max_turns": 15, "max_images": 0, "prompt_tips_checklist": [] },
+    "hints": ["高管视角：结论先行", "完成 Day7 后可查看成长报告"]
+  }
+]

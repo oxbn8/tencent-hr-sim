@@ -1,0 +1,159 @@
+{
+  "cm_d3_er_case": {
+    "start_node": "open",
+    "nodes": {
+      "open": {
+        "speaker": "员工小李",
+        "text": "（情绪激动）我连续两周每天加班到半夜，一点补偿都没有！你们 HR 到底管不管？我已经在部门群 @ 你了！",
+        "choices": [
+          {
+            "id": "empathy",
+            "label": "先倾听安抚",
+            "user_line": "小李，感谢你愿意和我聊。我能理解你现在很委屈，我们先找个安静的地方，把情况完整说一下好吗？",
+            "next": "after_empathy"
+          },
+          {
+            "id": "policy",
+            "label": "先解释政策",
+            "user_line": "小李，关于加班补偿公司有明确政策，我们需要先核对考勤记录和审批流程。",
+            "next": "after_policy"
+          },
+          {
+            "id": "schedule",
+            "label": "提议稍后详谈",
+            "user_line": "收到你的反馈。我现在在开会，30 分钟后我找你一对一详聊，可以吗？",
+            "next": "after_schedule"
+          }
+        ]
+      },
+      "after_empathy": {
+        "speaker": "员工小李",
+        "text": "（语气稍缓）好吧…主要是产品上线赶工，Leader 说「辛苦一下」，但没说调休的事。",
+        "choices": [
+          {
+            "id": "clarify",
+            "label": "澄清事实与记录",
+            "user_line": "我先确认：这两周具体哪些日期加班、是否有书面或 IM 安排？我会同步和 Leader 核实。",
+            "next": "end_ok"
+          },
+          {
+            "id": "promise",
+            "label": "承诺立即调休（不当）",
+            "user_line": "放心，我给你批调休，这事我来搞定。",
+            "next": "end_risk"
+          }
+        ]
+      },
+      "after_policy": {
+        "speaker": "员工小李",
+        "text": "（更激动）别跟我讲政策！我加班是事实，你们就是不想管！",
+        "choices": [
+          {
+            "id": "recover",
+            "label": "调整话术，先共情",
+            "user_line": "抱歉刚才太生硬了。你的感受我完全理解，我们先把事实梳理清楚，再一起看有哪些合规可行的安排。",
+            "next": "after_empathy"
+          }
+        ]
+      },
+      "after_schedule": {
+        "speaker": "员工小李",
+        "text": "30 分钟可以，但今天必须有个说法，不然我就找劳动监察。",
+        "choices": [
+          {
+            "id": "confirm",
+            "label": "确认时间并给初步安排",
+            "user_line": "好的，4 点会议室见。我会提前准备考勤核对清单，见面先听你说完，再一起定下一步。",
+            "next": "end_ok"
+          }
+        ]
+      },
+      "end_ok": {
+        "speaker": "员工小李",
+        "text": "（平静）行，那就四点见。希望这次能有个结果。",
+        "choices": [],
+        "terminal": true,
+        "mentor_note": "做得好：倾听 → 澄清事实 → 约定下一步，避免过早承诺。"
+      },
+      "end_risk": {
+        "speaker": "员工小李",
+        "text": "那行，我先等着。但如果没有书面确认，我还是会升级。",
+        "choices": [],
+        "terminal": true,
+        "mentor_note": "注意：未核实事实就承诺调休，可能带来合规风险。建议改为「核实后按制度处理」。"
+      }
+    }
+  },
+  "cm_d6_conflict": {
+    "start_node": "open",
+    "nodes": {
+      "open": {
+        "speaker": "产品负责人",
+        "text": "设计又拖稿！校招 KV 明天就要，他们还在改字体！",
+        "choices": [
+          {
+            "id": "neutral",
+            "label": "中立开场，聚焦目标",
+            "user_line": "感谢两位同步。我们的共同目标是明天按时交付可用 KV，我先确认当前进度和卡点。",
+            "next": "design_voice"
+          },
+          {
+            "id": "blame",
+            "label": "追问设计为何延期",
+            "user_line": "设计同学，为什么又延期了？",
+            "next": "design_upset"
+          }
+        ]
+      },
+      "design_voice": {
+        "speaker": "设计负责人",
+        "text": "不是拖，是产品昨天又改了主标题和配色，我们 overnight 重出一版。",
+        "choices": [
+          {
+            "id": "agenda",
+            "label": "抛出会议 Agenda",
+            "user_line": "我们 30 分钟对齐：① 最终文案 ② 冻结版式 ③ 交付时间点。请各自用 2 分钟说现状。",
+            "next": "align"
+          },
+          {
+            "id": "side_product",
+            "label": "偏袒产品方",
+            "user_line": "设计要配合业务节奏，今晚必须出稿。",
+            "next": "design_upset"
+          }
+        ]
+      },
+      "design_upset": {
+        "speaker": "设计负责人",
+        "text": "（不满）需求变更多次，我们没法背锅。HR 能不能客观一点？",
+        "choices": [
+          {
+            "id": "reset",
+            "label": "重置对话，对事不对人",
+            "user_line": "抱歉，我们回到事实：变更记录、当前版本、剩余工作量。我来记录，一起找可交付的最小方案。",
+            "next": "align"
+          }
+        ]
+      },
+      "align": {
+        "speaker": "产品负责人",
+        "text": "可以，主标题就用「2026 与你共创」，配色不再改了。",
+        "choices": [
+          {
+            "id": "close",
+            "label": "确认交付并定责",
+            "user_line": "好，设计 22:00 前出冻结版，产品 21:00 前书面确认文案。我 21:30 检查进度，有问题随时拉我。",
+            "next": "end_ok"
+          }
+        ]
+      },
+      "end_ok": {
+        "speaker": "设计负责人",
+        "text": "可以，按这个节奏来。",
+        "choices": [],
+        "terminal": true,
+        "mentor_note": "调解成功：中立开场 → 时间盒 Agenda → 书面确认 → 明确检查点。"
+      }
+    }
+  }
+}

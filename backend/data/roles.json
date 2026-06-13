@@ -1,0 +1,73 @@
+{
+  "roles": [
+    {
+      "id": "creative",
+      "name": "创意型 HR",
+      "slogan": "用 AIGC 释放创意",
+      "available": true,
+      "hot": false,
+      "directions": ["企业文化", "雇主品牌", "活动策划", "内容制作"],
+      "track_focus": "侧重 AIGC 出图、文案与传播物料",
+      "abilities": ["想象力与审美", "内容创作力", "AIGC（AI 绘图/写作/视频）"],
+      "equipment": [
+        { "id": "eq_aigc_draw", "name": "AIGC 绘图台", "desc": "Chat 出图模式" },
+        { "id": "eq_aigc_write", "name": "AIGC 写作台", "desc": "Chat 文案模式" }
+      ],
+      "guide_preview": [
+        "Day1: 校招 Slogan",
+        "Day2: 雇主品牌 9 图文案",
+        "Day3: 校招空宣主视觉海报（AIGC）",
+        "Day4: Open Day 30s 视频脚本",
+        "Day5: 技术岗雇主品牌长图",
+        "Day6: 联合校招 Campaign KV",
+        "Day7: 主视觉 A/B 测试"
+      ]
+    },
+    {
+      "id": "comm",
+      "name": "沟通型 HR",
+      "slogan": "用 AI 助力人与业务的链接",
+      "available": true,
+      "hot": true,
+      "directions": ["招聘调配", "员工培训", "HRBP", "员工关系"],
+      "track_focus": "侧重业务对话、冲突调解与话术沟通",
+      "abilities": ["人际感知力", "灵活解决问题", "沟通协作", "逻辑思维", "AI 工具学习"],
+      "equipment": [
+        { "id": "eq_listener", "name": "倾听者徽章", "desc": "冲突场景情绪提示" },
+        { "id": "eq_script_helper", "name": "AI 话术助手", "desc": "生成沟通草稿" }
+      ],
+      "guide_preview": [
+        "Day1: 业务方催招澄清",
+        "Day2: 拒 Offer 挽回",
+        "Day3: 员工工时争议沟通",
+        "Day4: 培训需求访谈",
+        "Day5: HRBP 周会 priority",
+        "Day6: 跨部门冲突调解",
+        "Day7: COE Executive Summary"
+      ]
+    },
+    {
+      "id": "analyst",
+      "name": "分析型 HR",
+      "slogan": "用 AI 洞悉数据真相",
+      "available": false,
+      "hot": true,
+      "directions": ["人力规划", "OD", "人才发展", "薪酬管理"],
+      "abilities": [],
+      "equipment": [],
+      "guide_preview": []
+    },
+    {
+      "id": "tech",
+      "name": "技术型 HR",
+      "slogan": "用技术重塑管理",
+      "available": false,
+      "hot": false,
+      "directions": ["HR 数字化 PM", "AI 应用科学家", "数据工程"],
+      "abilities": [],
+      "equipment": [],
+      "guide_preview": []
+    }
+  ],
+  "tcamp_url": "https://tcamp.qq.com/mooc/BhOMsGCf/task/6333"
+}

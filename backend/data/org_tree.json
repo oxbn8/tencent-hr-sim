@@ -1,0 +1,210 @@
+{
+  "business_groups": [
+    {
+      "id": "wxg",
+      "name": "WXG",
+      "name_cn": "微信事业群",
+      "description": "微信、企业微信、微信支付等社交与商业基础设施",
+      "culture_summary": "用户为本、克制、长期主义——做「用完即走」却离不开的连接。",
+      "intro": "WXG 是腾讯连接用户与商业的核心事业群，旗下微信月活超过十亿，覆盖社交、支付、小程序与企业服务。HR 在这里既要理解 C 端产品的温度，也要支撑 B 端业务的合规与组织扩张。",
+      "highlights": ["十亿级用户产品", "社交 × 支付 × 企业服务", "强产品文化与工程师文化"],
+      "recommended_track": "comm",
+      "track_reason": "WXG 强调业务协同与 ToB 服务，沟通型实训更贴近 HRBP / 招聘调配日常。"
+    },
+    {
+      "id": "pcg",
+      "name": "PCG",
+      "name_cn": "平台与内容事业群",
+      "description": "腾讯视频、QQ、新闻等内容与平台产品",
+      "culture_summary": "内容为王、创意驱动——在 IP 与平台之间讲好每一个故事。",
+      "intro": "PCG 整合腾讯内容与平台能力，涵盖长短视频、资讯、社交与 IP 运营。HR 需熟悉内容行业节奏，在创意、版权与组织协同之间找到平衡，支撑海量创作者与运营团队。",
+      "highlights": ["视频与内容生态", "IP 与平台双轮驱动", "创意型岗位密集"],
+      "recommended_track": "creative",
+      "track_reason": "PCG 内容生态与 IP 运营密集，创意型实训更贴近雇主品牌与传播物料场景。"
+    },
+    {
+      "id": "ieg",
+      "name": "IEG",
+      "name_cn": "互动娱乐事业群",
+      "description": "游戏研发、发行与电竞生态",
+      "culture_summary": "热爱游戏、追求极致——用好玩的产品连接全球玩家。",
+      "intro": "IEG 是中国最大的游戏研发与发行平台之一，拥有王者荣耀、和平精英等国民级产品，并布局全球发行与电竞赛事。HR 要理解项目制组织、版本迭代节奏与全球化人才布局。",
+      "highlights": ["国民级游戏 IP", "研发 + 发行 + 电竞", "项目制与敏捷组织"],
+      "recommended_track": "creative",
+      "track_reason": "IEG 宣发与电竞活动丰富，创意型实训更贴近 Campaign 与视觉传播。"
+    },
+    {
+      "id": "teg",
+      "name": "TEG",
+      "name_cn": "技术工程事业群",
+      "description": "基础架构、安全、AI 平台与工程技术中台",
+      "culture_summary": "技术向善、工程卓越——为全公司提供可靠、安全、可扩展的底座。",
+      "intro": "TEG 为全公司提供底层技术能力，包括云基础设施、信息安全、大数据与 AI 平台。HR 面向大量技术专家，强调专业尊重、技术社区建设与长期人才培养。",
+      "highlights": ["全公司技术中台", "安全与 AI 基础设施", "技术专家型组织"],
+      "recommended_track": "comm",
+      "track_reason": "TEG 面向技术专家组织，沟通型实训更贴近技术招聘澄清与专家关系维护。"
+    },
+    {
+      "id": "csig",
+      "name": "CSIG",
+      "name_cn": "云与智慧产业事业群",
+      "description": "腾讯云、产业互联网与智慧解决方案",
+      "culture_summary": "产业数字化、客户成功——以云为底座，助力千行百业智慧升级。",
+      "intro": "CSIG 聚焦产业数字化，以腾讯云为底座，为政企、金融、医疗、教育等行业提供智慧解决方案。HR 需要 ToB 商务思维，理解客户项目交付与跨地域团队管理。",
+      "highlights": ["腾讯云与产业互联网", "ToB 解决方案", "政企与行业客户"],
+      "recommended_track": "comm",
+      "track_reason": "CSIG 以 ToB 项目交付为主，沟通型实训更贴近 HRBP 与跨部门协调。"
+    },
+    {
+      "id": "cdg",
+      "name": "CDG",
+      "name_cn": "企业发展事业群",
+      "description": "广告、金融、投资与企业服务",
+      "culture_summary": "商业创新、务实进取——连接流量与价值，在变化中把握增长。",
+      "intro": "CDG 覆盖腾讯广告、理财通、投资并购与企业级服务，连接流量变现与金融科技。HR 需兼顾商业合规、绩效激励与高速变化的市场环境，支撑多元业务线并行发展。",
+      "highlights": ["广告与商业变现", "金融科技", "投资与企业服务"],
+      "recommended_track": "comm",
+      "track_reason": "CDG 商业节奏快、跨业务线并行，沟通型实训更贴近业务方对话与冲突调解。"
+    }
+  ],
+  "teams": [
+    {
+      "id": "wxg-core",
+      "bg_id": "wxg",
+      "name": "微信基础",
+      "description": "负责微信核心功能、账号体系与基础体验，是 WXG 的技术与产品基石。",
+      "focus": "用户体验、稳定性、隐私合规",
+      "hr_note": "校招侧重产品 sense 与沟通，培训生常参与雇主品牌与校园宣讲物料。"
+    },
+    {
+      "id": "wxg-pay",
+      "bg_id": "wxg",
+      "name": "微信支付",
+      "description": "国内领先的移动支付与商业支付解决方案，连接商户与消费者。",
+      "focus": "支付安全、商户生态、跨境业务",
+      "hr_note": "HR 需熟悉金融行业合规话术，创意物料强调可信与简洁。"
+    },
+    {
+      "id": "wxg-wework",
+      "bg_id": "wxg",
+      "name": "企业微信",
+      "description": "面向企业的数字化办公与协同平台，连接微信生态与 B 端客户。",
+      "focus": "企业服务、销售协同、行业方案",
+      "hr_note": "ToB 招聘文案需突出行业场景与客户价值。"
+    },
+    {
+      "id": "pcg-video",
+      "bg_id": "pcg",
+      "name": "腾讯视频",
+      "description": "长短视频内容与会员生态，涵盖自制剧、综艺与体育版权。",
+      "focus": "内容运营、会员增长、IP 联动",
+      "hr_note": "创意型 HR 常负责宣发海报与明星/IP 联合活动视觉。"
+    },
+    {
+      "id": "pcg-qq",
+      "bg_id": "pcg",
+      "name": "QQ",
+      "description": "年轻用户社交与娱乐平台，包含 QQ 频道、游戏社交等能力。",
+      "focus": "年轻化运营、社区、社交玩法",
+      "hr_note": "沟通型 HR 需熟悉 Z 世代语言与社区氛围。"
+    },
+    {
+      "id": "pcg-news",
+      "bg_id": "pcg",
+      "name": "腾讯新闻",
+      "description": "资讯分发与内容平台，连接媒体、创作者与读者。",
+      "focus": "资讯时效、内容质量、算法分发",
+      "hr_note": "文案训练强调准确、客观与品牌调性。"
+    },
+    {
+      "id": "ieg-honor",
+      "bg_id": "ieg",
+      "name": "王者荣耀",
+      "description": "国民 MOBA 手游，拥有庞大电竞生态与全球影响力。",
+      "focus": "版本迭代、电竞赛事、全球化",
+      "hr_note": "Campaign 常围绕赛事、新英雄与校园电竞联动。"
+    },
+    {
+      "id": "ieg-peace",
+      "bg_id": "ieg",
+      "name": "和平精英",
+      "description": "战术竞技类手游，强调团队协作与赛事运营。",
+      "focus": "竞技体验、直播生态、跨界合作",
+      "hr_note": "视觉物料偏热血、团队感，需注意适龄提示。"
+    },
+    {
+      "id": "ieg-esports",
+      "bg_id": "ieg",
+      "name": "腾讯电竞",
+      "description": "统筹腾讯电竞赛事、联盟与产业合作。",
+      "focus": "赛事品牌、俱乐部、赞助合作",
+      "hr_note": "HR 需协调多项目线，沟通节奏快、节点密集。"
+    },
+    {
+      "id": "teg-infra",
+      "bg_id": "teg",
+      "name": "基础架构",
+      "description": "为全公司提供计算、存储、网络与中间件等基础设施。",
+      "focus": "高可用、成本优化、工程效率",
+      "hr_note": "技术招聘文案需准确，避免过度营销化。"
+    },
+    {
+      "id": "teg-sec",
+      "bg_id": "teg",
+      "name": "安全",
+      "description": "覆盖网络安全、数据安全、风控与合规能力。",
+      "focus": "威胁防护、合规审计、安全文化",
+      "hr_note": "对外沟通需严谨，强调责任与专业形象。"
+    },
+    {
+      "id": "teg-ai",
+      "bg_id": "teg",
+      "name": "AI 平台",
+      "description": "混元等大模型与 AI 基础设施，支撑全公司 AI 应用。",
+      "focus": "大模型、MLOps、AI 产品化",
+      "hr_note": "本模拟场 AI Chat 默认对接混元，与 TEG AI 平台能力一脉相承。"
+    },
+    {
+      "id": "csig-cloud",
+      "bg_id": "csig",
+      "name": "腾讯云",
+      "description": "公有云、私有云与混合云产品，服务百万级企业客户。",
+      "focus": "云产品、解决方案、客户成功",
+      "hr_note": "ToB 招聘强调客户案例与行业 expertise。"
+    },
+    {
+      "id": "csig-industry",
+      "bg_id": "csig",
+      "name": "智慧产业",
+      "description": "面向政务、医疗、教育、零售等行业的数字化方案。",
+      "focus": "行业方案、项目交付、生态合作",
+      "hr_note": "HR 需理解项目制与多地协同，文案突出行业价值。"
+    },
+    {
+      "id": "cdg-ads",
+      "bg_id": "cdg",
+      "name": "腾讯广告",
+      "description": "效果广告与品牌广告平台，连接广告主与流量。",
+      "focus": "广告投放、数据分析、商业产品",
+      "hr_note": "创意物料需数据感与商业结果导向并存。"
+    },
+    {
+      "id": "cdg-licaitong",
+      "bg_id": "cdg",
+      "name": "理财通",
+      "description": "腾讯旗下基金销售与财富管理服务平台。",
+      "focus": "金融合规、用户资产、稳健增长",
+      "hr_note": "所有对外文案须经合规审核，用语保守专业。"
+    }
+  ],
+  "levels": [
+    { "id": "trainee", "name": "培训生", "available": true, "recommended": true },
+    { "id": "intern", "name": "实习生", "available": false, "recommended": false }
+  ],
+  "onboarding_notes": {
+    "job_family": "S3 职能线 · HR 与管理线",
+    "formal_hiring_hint": "本模拟为实训体验。正式校招以「事业群 × 职能族 × 部门」三维匹配为准，实训方向不等于定岗结果。",
+    "track_selection_label": "实训方向",
+    "track_selection_desc": "创意型 / 沟通型是七日闯关的玩法分支，用于体验不同 HR 工作侧重，不代表最终职能分配。"
+  }
+}
